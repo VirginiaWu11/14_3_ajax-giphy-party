@@ -26,8 +26,6 @@ $("#search").on("click", function (e) {
     });
     let amount = result.data.data.length;
     let random = Math.floor(Math.random() * amount);
-    console.log(random);
-    console.log(result.data.data);
     let gif = result.data.data[random].images.original.url;
     $("div").append(`<img src="${gif}"></img>`);
   }
