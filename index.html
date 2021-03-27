@@ -3,16 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <title>Giphy Party!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
-    <h1>GIPHY PARTY</h1>
-    <form>
-      <input type="text" placeholder="Enter a search term" id="searchTerm" />
-      <input type="submit" value="Search Giphy!" id="search" />
-      <button id="remove">Remove Images</button>
-    </form>
-    <div></div>
+    <div class="container">
+      <div class="jumbotron py-4">
+        <h1 class="text-center">GIPHY PARTY!</h1>
+        <form class="text-center">
+          <input
+            type="text"
+            placeholder="Enter a search term"
+            id="searchTerm"
+          />
+          <input
+            type="submit"
+            value="Search Giphy!"
+            id="search"
+            class="btn btn-success"
+          />
+          <button id="remove" class="btn btn-danger">Remove Images</button>
+        </form>
+      </div>
+
+      <div id="gifs" class="row"></div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>

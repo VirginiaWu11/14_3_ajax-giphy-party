@@ -11,12 +11,12 @@ $("#search").on("click", function (e) {
     let amount = result.data.data.length;
     let random = Math.floor(Math.random() * amount);
     let gif = result.data.data[random].images.original.url;
-    $("div").append(`<img src="${gif}"></img>`);
+    $("#gifs").append(`<img src="${gif}" class="col-4"></img>`);
   }
   getGif(searchTerm);
 });
 
 $("#remove").on("click", function (e) {
   e.preventDefault();
-  $("div").html("");
+  $("#gifs").html("");
 });
